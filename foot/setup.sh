@@ -10,6 +10,9 @@ case "$(lsb_release --id --short)" in
 	"Arch")
 		sudo pacman --sync --needed --noconfirm foot
 		;;
+	"Pop")
+		sudo apt install --yes foot
+		;;
 	*)
 		echo "Unsupported OS..."
 		echo "Do what you need to, to install: foot"
@@ -21,5 +24,6 @@ if [ -e "${DESTINATION}" ]; then
 	rm -fr ${DESTINATION}
 fi
 echo "i> Linking configuration..."
+mkdir --parents $(dirname ${DESTINATION})
 ln --symbolic --verbose ${HERE} ${DESTINATION}
 
