@@ -1,5 +1,5 @@
 return {
-	"williamboman/mason.nvim",
+	"mason-org/mason.nvim",
 	keys = require("keymaps.mason"),
 	config = true,
 }

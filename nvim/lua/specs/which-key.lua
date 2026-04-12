@@ -11,10 +11,9 @@ return {
 			{ "<leader>b", group = "[b]uffer" },
 			{ "<leader>f", group = "[f]ind" },
 			{ "<leader>t", group = "[t]erminal" },
-			{ "<leader>c", group = "[c]ode" },
 			{ "<leader>C", group = "[C]onfiguration" },
-			{ "<leader>w", group = "[w]orkspace" },
 			{ "<leader>d", group = "[d]ebug" },
+			{ "gr", group = "LSP" },
 		})
 	end,
 }

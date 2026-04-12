@@ -10,13 +10,15 @@ ${HERE}/../font.sh
 echo "i> Ensure all components are installed"
 case "${OS_ID}" in
 	"Arch")
-		sudo pacman --sync --needed --noconfirm gcc make git lazygit ripgrep fd unzip lua51 luarocks neovim
+		sudo pacman --sync --needed --noconfirm gcc make git lazygit ripgrep fd unzip lua51 luarocks neovim rustup
 		;;
 	*)
 		echo "!!> Unsupported OS..."
-		echo "!!> Do what you need to, to install: gcc, make, git, lazygit, ripgrep, fd, unzip, lua (5.1), luarocks and neovim"
+		echo "!!> Do what you need to, to install: gcc, make, git, lazygit, ripgrep, fd, unzip, lua (5.1), luarocks, neovim and rustup"
 		;;
 esac
+
+cargo install tree-sitter-cli
 
 # Link configuration
 if [ -e "${DESTINATION}" ]; then

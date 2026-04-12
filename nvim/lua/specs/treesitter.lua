@@ -1,20 +1,15 @@
 return {
-	"nvim-treesitter/nvim-treesitter",
+	"neovim-treesitter/nvim-treesitter",
+	dependencies = { "nvim-lua/plenary.nvim" },
+	lazy = false,
 	build = ":TSUpdate",
-	main = "nvim-treesitter.configs",
-	opts = {
-		ensure_installed = { "lua", "rust", "html", "css", "typescript", "javascript", "lua", "markdown" },
-		auto_install = true,
-		ignore_install = {},
-		highlight = {
-			enable = true,
-		},
-		indent = {
-			enable = true,
-		},
-	},
 	config = function()
-		vim.opt.foldmethod = "expr"
-		vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+		vim.api.nvim_create_autocmd("FileType", {
+			callback = function()
+				vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+				vim.wo.foldmethod = "expr"
+				vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+			end,
+		})
 	end,
 }
