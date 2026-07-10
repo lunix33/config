@@ -12,6 +12,9 @@ case "${OS_ID}" in
 	"Arch")
 		sudo pacman --sync --needed --noconfirm gcc make git lazygit ripgrep fd unzip lua51 luarocks neovim rustup
 		;;
+	"Linuxmint")
+		sudo apt install --yes gcc make git ripgrep fd-find unzip lua5.1 luarocks
+		;;
 	*)
 		echo "!!> Unsupported OS..."
 		echo "!!> Do what you need to, to install: gcc, make, git, lazygit, ripgrep, fd, unzip, lua (5.1), luarocks, neovim and rustup"
