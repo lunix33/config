@@ -5,15 +5,17 @@ return {
 		"echasnovski/mini.nvim",
 	},
 	event = "VimEnter",
-	opts = {},
-	config = function()
-		require("which-key").add({
+	opts = {
+		spec = {
 			{ "<leader>b", group = "[b]uffer" },
 			{ "<leader>f", group = "[f]ind" },
 			{ "<leader>t", group = "[t]erminal" },
 			{ "<leader>C", group = "[C]onfiguration" },
 			{ "<leader>d", group = "[d]ebug" },
 			{ "gr", group = "LSP" },
-		})
-	end,
+			{ "gra", mode = "n", desc = "Code action" },
+			{ "grn", mode = "n", desc = "Rename symbol" },
+			{ "gq", group = "Format" }
+		},
+	},
 }

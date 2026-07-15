@@ -133,9 +133,9 @@ return {
 					require("telescope.builtin").lsp_document_symbols()
 				end, "[LSP] Document symbols")
 
-				map("<C-d>", function()
+				map("<leader>fd", function()
 					require("telescope.builtin").diagnostics()
-				end, "find code [d]iagnostic")
+				end, "[f]ind code [d]iagnostic")
 			end,
 		})
 	end,
