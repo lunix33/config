@@ -19,4 +19,4 @@ require("lazy").setup({
 		},
 	},
 })
-vim.keymap.set("n", "<leader>Cl", vim.cmd.Lazy, { desc = "[C]onfiguration [l]azy" })
+vim.keymap.set("n", "<leader>Cl", vim.cmd.Lazy, { desc = "Open Lazy" })

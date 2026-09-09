@@ -4,6 +4,6 @@ return {
 		function()
 			require("dapui").toggle()
 		end,
-		desc = "[d]ebug toggle [u]i",
+		desc = "Debug: Toggle ui",
 	},
 }

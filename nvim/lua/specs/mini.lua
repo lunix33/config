@@ -3,7 +3,7 @@ return {
 	config = function()
 		require("mini.icons").setup()
 		require("mini.surround").setup()
-		require("mini.sessions").setup({ autoread = true })
+		require("mini.sessions").setup({ autoread = true, autowrite = true })
 		require("mini.move").setup({
 			mappings = {
 				left = "<M-Left>",

@@ -4,6 +4,7 @@ return {
 		"nvim-tree/nvim-web-devicons",
 	},
 	event = "VimEnter",
+	keys = require("keymaps.bufferline"),
 	opts = {
 		options = {
 			themable = true,

@@ -6,7 +6,7 @@ return {
 			function()
 				require("telescope.builtin").find_files()
 			end,
-			desc = "[f]ind [f]ile",
+			desc = "Find: File",
 		},
 		{
 			mode = "n",
@@ -14,7 +14,7 @@ return {
 			function()
 				require("telescope.builtin").oldfiles()
 			end,
-			desc = "[p]reviourly open",
+			desc = "Previourly open",
 		},
 		{
 			mode = "n",
@@ -22,7 +22,7 @@ return {
 			function()
 				require("telescope.builtin").current_buffer_fuzzy_find()
 			end,
-			desc = "[f]ind buffer [t]ext",
+			desc = "Find: Buffer text",
 		},
 		{
 			mode = "n",
@@ -30,7 +30,7 @@ return {
 			function()
 				require("telescope.builtin").live_grep()
 			end,
-			desc = "[f]ind file [T]ext",
+			desc = "Find: File text",
 		},
 		{
 			mode = "n",
@@ -38,7 +38,7 @@ return {
 			function()
 				require("telescope.builtin").grep_string()
 			end,
-			desc = "[f]ind [c]ursor text",
+			desc = "Find: Cursor text",
 		},
 		{
 			mode = "v",
@@ -46,7 +46,7 @@ return {
 			function()
 				require("telescope.builtin").grep_string()
 			end,
-			desc = "[f]ind [c]ursor text",
+			desc = "Find: Cursor text",
 		},
 		{
 			mode = "n",
@@ -54,7 +54,7 @@ return {
 			function()
 				require("telescope.builtin").keymaps()
 			end,
-			desc = "[f]ind [k]eymaps",
+			desc = "Find: Keymap",
 		},
 		{
 			mode = "n",
@@ -62,7 +62,7 @@ return {
 			function()
 				require("telescope.builtin").help_tags()
 			end,
-			desc = "[f]ind [h]elp",
+			desc = "Find: Help",
 		},
 		{
 			mode = "n",
@@ -70,7 +70,7 @@ return {
 			function()
 				require("telescope.builtin").buffers()
 			end,
-			desc = "[b]uffer select",
+			desc = "Buffer: Select",
 		},
 		{
 			mode = "n",
@@ -78,7 +78,7 @@ return {
 			function()
 				require("telescope.builtin").resume()
 			end,
-			desc = "[r]esume (telescope)",
+			desc = "Resume (telescope)",
 		},
 		{
 			mode = "n",
@@ -86,7 +86,7 @@ return {
 			function()
 				require("telescope.builtin").marks()
 			end,
-			desc = "[m]arks",
+			desc = "Marks",
 		},
 		{
 			mode = "n",
@@ -94,7 +94,7 @@ return {
 			function()
 				require("telescope").extensions.file_browser.file_browser({ path = "%:p:h" })
 			end,
-			desc = "File [e]xplorer",
+			desc = "File explorer",
 		},
 		{
 			mode = "n",
@@ -102,7 +102,7 @@ return {
 			function()
 				require("telescope").extensions.file_browser.file_browser({ path = vim.fn.stdpath("config") })
 			end,
-			desc = "[C]onfiguration [e]dit",
+			desc = "Edit configuration",
 		},
 		-- To consider:
 		-- - quickfix
@@ -135,7 +135,7 @@ return {
 
 				map("<leader>fd", function()
 					require("telescope.builtin").diagnostics()
-				end, "[f]ind code [d]iagnostic")
+				end, "Find: Code diagnostic")
 			end,
 		})
 	end,

@@ -5,6 +5,6 @@ return {
 		function()
 			vim.cmd.Mason()
 		end,
-		desc = "[C]onfiguration [m]ason",
+		desc = "Open Mason",
 	},
 }

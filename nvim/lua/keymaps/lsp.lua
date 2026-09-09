@@ -9,7 +9,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
 			map("<C-w>i", function()
 				vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = event.buf }))
-			end, "toggle [i]nlay hints")
+			end, "Toggle inlay hints")
 		end
 	end,
 })
